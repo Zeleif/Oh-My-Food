@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap');
-@import url('https://fonts.googleapis.com/css2? family= Roboto+Serif:wght@300;400;500 & display=swap');
-* , 
-::after, 
+@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
+@import url("https://fonts.googleapis.com/css2? family= Roboto+Serif:wght@300;400;500 & display=swap");
+*,
+::after,
 ::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
