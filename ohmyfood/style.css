@@ -27,8 +27,9 @@ header {
   gap: 10px;
   font-family: "Roboto", sans-serif;
 }
-.Localisation city {
-  font-size: 1.1rem;
+
+.city {
+  font-size: 1rem;
 }
 
 .présentation {
@@ -58,6 +59,21 @@ header {
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.tuto ol {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.tuto li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  width: 85vw;
+  height: 6vh;
+  text-align: center;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 

@@ -1,0 +1,20 @@
+@use "../utils/dark.scss";
+
+.tuto {
+ & ol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   
+    
+ }  
+ & li{
+    background-color: #f6f6f6;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    width: 85vw;
+    height: 6vh;
+    text-align: center;
+    @include dark.shadow;
+ }
+}
