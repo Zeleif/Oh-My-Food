@@ -2,18 +2,18 @@
     text-align: center;
     padding: 1rem;
     font-family: "Roboto", sans-serif;
-  
-  & pres_title .pres_subtitle {
+}
+  .pres_title .pres_subtitle {
     display: flex;
     justify-content: center;
     text-align: center;
   }
   
-  & pres_subtitle {
+  .pres_subtitle {
     margin: 1.5rem 0;
     font-size: 18px;
   }
-  & pres_btn {
+  .pres_btn {
     border: 0;
     padding: 1rem 1rem;
     border-radius: 30px;
@@ -24,5 +24,4 @@
     background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
     cursor: pointer;
     box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
-  }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -26,8 +27,7 @@ header {
   gap: 10px;
   font-family: "Roboto", sans-serif;
 }
-
-.city {
+.Localisation city {
   font-size: 1.1rem;
 }
 
