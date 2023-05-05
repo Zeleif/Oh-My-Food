@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.présentation {
+  text-align: center;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.présentation pres_title .pres_subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.présentation pres_subtitle {
+  margin: 1.5rem 0;
+  font-size: 18px;
+}
+.présentation pres_btn {
+  border: 0;
+  padding: 1rem 1rem;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  background-color: #686868;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}/*# sourceMappingURL=presentation.css.map */
