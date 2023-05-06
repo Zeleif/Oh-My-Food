@@ -1,20 +1,38 @@
 @use "../utils/dark.scss";
-
-.tuto {
- & ol {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-   
-    
- }  
- & li{
-    background-color: #f6f6f6;
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    width: 85vw;
-    height: 6vh;
-    text-align: center;
-    @include dark.shadow;
- }
+.process {
+   position: absolute;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
+   .process_title {
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+   }
+.process_step p {
+ background-color: #f6f6f6;
+ text-align: center;
+ display: flex;
+ gap: 1.5rem;
+ border-radius: 25px;
+ width: 80vw;
+ padding: 1.8rem;
+ @include dark.shadow;
+}
+  i.fas {
+  color: #7E7E7E;
+ }
+ .process_step div {
+   display: grid;
+   place-items: center;
+   position: relative;
+   left: -0.8rem;
+   bottom: 4.4rem;
+   width: 1.5rem;
+   height: 1.5rem;
+   border-radius: 50%;
+   color: #fff;
+   background-color: #9356dc;
+ }
+
