@@ -19,47 +19,42 @@
     <header>
         <img src="./Assets/images/logo/ohmyfood@2x.svg" alt="Logo">
     </header>
+    <!-- Recherche localisation -->
+    <nav class="nav-bar">
+        <!-- recherche par ville -->
+        <form class="search-bar">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" class="bold" id="search" placeholder="Paris, Belleville">
+            </div>
+        </form>
+    </nav>
+    <!-- tuto présentation -->
+    <section class="présentation">
+        <h2 class="pres_title">Réservez le menu qui<br> vous convient</h2>
+        <p class="pres_subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+        <button class="pres_btn" type="button">Explorer nos restaurants</button>
+    </section>
     <main>
-        <section>
-            <nav class="nav-bar">
-                <!-- recherche par ville -->
-                <form class="search-bar">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <label for="search" class="accessibility-label">Entrez le nom de la ville</label>
-                    <input type="text" class="bold" id="search" placeholder="Paris, Belleville">
-                    </label>
-                    </div>
-                </form>
-            </nav>
-        </section>
-        <section class="présentation">
-            <h2 class="pres_title">Réservez le menu qui<br> vous convient</h2>
-            <p class="pres_subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-            <button class="pres_btn" type="button">Explorer nos restaurants</button>
-        </section>
-        <h2 class="process_title">Fonctionnement</h2>
-        <section class="process">
-            <div class="process_step">
-                <p>
-                    <i class="fas fa-mobile-alt"></i>
+        <!-- choix des 4 restaurants -->
+        <section class="tuto">
+            <h2 class="bold">Fonctionnement</h2>
+            <ol id="choix-tuto">
+                <li>
+                    <span>1</span>
+                    <i class="choix1 fa-solid fa-mobile-screen-button"></i>
                     Choisissez un restaurant
-                </p>
-                <div>1</div>
-            </div>
-            <div class="process_step">
-                <p>
-                    <i class="fas fa-list-ul"></i>
+                </li>
+                <li>
+                    <span>2</span>
+                    <i class="choix2 fa-solid fa-list"></i>
                     Composez votre menu
-                </p>
-                <div>2</div>
-            </div>
-            <div class="process_step">
-                <p>
-                    <i class="fas fa-store"></i>
+                </li>
+                <li>
+                    <span>3</span>
+                    <i class="choix3 fa-sharp fa-solid fa-store"></i>
                     Dégustez au restaurant
-                </p>
-                <div>3</div>
-            </div>
+                </li>
+            </ol>
         </section>
 
 

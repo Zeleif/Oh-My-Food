@@ -1,7 +1,9 @@
 @use "../utils/dark.scss";
 .présentation {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    background-color: #fafafa;
+    padding-bottom: 3rem;
 }
   .pres_title .pres_subtitle {
     display: flex;
@@ -12,6 +14,7 @@
   .pres_subtitle {
     margin: 1.5rem 0;
     font-weight: 300;
+    color: gray;
   }
   .pres_btn {
     border: 0;
