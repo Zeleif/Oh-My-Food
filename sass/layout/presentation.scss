@@ -2,7 +2,6 @@
 .présentation {
     text-align: center;
     padding: 1rem;
-    font-family: "Roboto", sans-serif;
 }
   .pres_title .pres_subtitle {
     display: flex;
@@ -12,7 +11,7 @@
   
   .pres_subtitle {
     margin: 1.5rem 0;
-    font-size: 18px;
+    font-weight: 300;
   }
   .pres_btn {
     border: 0;

@@ -1,9 +1,20 @@
-*,
+* {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
 ::before,
 ::after {
     box-sizing: border-box;
 }
-body {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
 }
+.bold {
+    font-weight: bold;
+  }
+  
+  .gray {
+    color: dimgray;
+  }
+  
+  .accessibility-label {
+    position: absolute;
+    left: -999px;
+  }

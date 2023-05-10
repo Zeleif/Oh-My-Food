@@ -1,11 +1,18 @@
-.Localisation {
-    background-color: #EAEAEA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-family: "Roboto", sans-serif;
-}
-   .city {
-    font-size: 1rem;
+.nav-bar {
+    text-align: center;
+    background-color: #f6f6f6;
+    
+    .search-bar {
+        margin-top: 5px;
+        font-size: 1rem;
+        padding-top: 1rem;
+        input {
+            border: none;
+            font-size: 1rem;
+            width: 200px;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            background-color: #f6f6f6;
+        }
+    }
 }
