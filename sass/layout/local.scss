@@ -1,18 +1,20 @@
+@use "../utils/variable.scss";
+
 .nav-bar {
     text-align: center;
     background-color: #f6f6f6;
     
     
     .search-bar {
-        font-size: 1rem;
-        padding-top: 1rem;
+        font-size: variable.$defaul_size;
+        padding-top: variable.$defaul_size;
         input {
             border: none;
-            font-size: 1rem;
+            font-size: variable.$defaul_size;
             font-weight: 700;
             width: 200px;
-            margin-left: 1rem;
-            margin-bottom: 1rem;
+            margin-left: variable.$defaul_size;
+            margin-bottom: variable.$defaul_size;
             background-color: #f6f6f6;
         }
     }

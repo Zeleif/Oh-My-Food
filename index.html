@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https : //fonts.googleapis.com/css2?family= famille= Roboto:wght@300;400;500;700 & display=swap"
         rel="stylesheet">
+    <link href="https : //fonts.googleapis.com/css2?family= Shrikhand & display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5dc5360e3d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Ohmyfood</title>
@@ -16,7 +17,7 @@
 
 <body>
     <!-------En-tête ------>
-    <header>
+    <header class="header">
         <img src="./Assets/images/logo/ohmyfood@2x.svg" alt="Logo">
     </header>
     <!-- Recherche localisation -->
@@ -25,7 +26,7 @@
         <form class="search-bar">
             <i class="fa-solid fa-location-dot"></i>
             <input type="text" class="bold" id="search" placeholder="Paris, Belleville">
-            </div>
+            </a>
         </form>
     </nav>
     <!-- tuto présentation -->
@@ -41,29 +42,86 @@
             <ol id="choix-tuto">
                 <li>
                     <span>1</span>
-                    <i class="choix1 fa-solid fa-mobile-screen-button"></i>
+                    <i class="fas fa-mobile-alt"></i>
                     Choisissez un restaurant
                 </li>
                 <li>
                     <span>2</span>
-                    <i class="choix2 fa-solid fa-list"></i>
+                    <i class="fas fa-list"></i>
                     Composez votre menu
                 </li>
                 <li>
                     <span>3</span>
-                    <i class="choix3 fa-sharp fa-solid fa-store"></i>
+                    <i class="fa-solid fa-store"></i>
                     Dégustez au restaurant
                 </li>
             </ol>
         </section>
-
-
-
-
-
-
+        <section class="restaurants">
+            <h2 class="resto_title">Restaurants</h2>
+            <div class="container">
+                <a href="#" class="card_resto">
+                    <img src="./Assets/images/restaurants/resto1.jpg" alt="vu de côté d'un plat gastronomique ">
+                    <span class="card__badge">Nouveau</span>
+                    <div class="card_info">
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+                <a href="#" class="card_resto">
+                    <img src="./Assets/images/restaurants/resto2.jpg" alt="vu du dessus d'un plat en sauce">
+                    <span class="card__badge">Nouveau</span>
+                    <div class="card_info">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+                <a href="#" class="card_resto">
+                    <img src="./Assets/images/restaurants/resto3.jpg" alt="plat de poisson">
+                    <span class="card__badge">Nouveau</span>
+                    <div class="card_info">
+                        <h3>À la française</h3>
+                        <p>Cité Rouge</p>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+                <a href="#" class="card_resto">
+                    <img src="./Assets/images/restaurants/resto4.jpg" alt="plat présenté en longueur">
+                    <span class="card__badge">Nouveau</span>
+                    <div class="card_info">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
 
     </main>
+    <footer class="footer">
+        <div class="container">
+            <h3 class='footer_title'>ohmyfood</h3>
+            <p>
+                <i class="fa-solid fa-utensils"></i>
+                Proposer un restaurant
+            </p>
+            <p>
+                <i class="fas fa-hands-helping"></i>
+                Devenir partenaire
+            </p>
+            <p>Mentions légales</p>
+            <!-- lien vers boite mail -->
+            <p>
+                <a href="mailto:ohmyfoodTest@gmail.com" class="lien">Contact</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>

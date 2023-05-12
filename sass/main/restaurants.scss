@@ -1,0 +1,68 @@
+$color-tertiary: #99E2D0;
+@use "../utils/variable.scss";
+@use "../utils/mixin.scss";
+
+.restaurants {
+    background-color: #f6f6f6;
+    margin-bottom: 2rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2 * variable.$defaul_size;
+  }  
+}
+.card_resto {
+    background-color: white;
+    border-radius: variable.$defaul_size;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;  
+  & img {
+    height: 12 * variable.$defaul_size;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover; 
+ }
+ & span {
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 35%);
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: variable.$defaul_size;
+    right: 0.75rem;
+  } 
+  .card_info {
+    position: relative;
+  }
+    h3 {
+      padding-top: 0.5rem
+  }
+    i {
+      font-size: 1.5rem;
+      position: absolute;
+      right: variable.$defaul_size;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  .fas {
+    color: transparent;
+    opacity: 0;
+     @include mixin.gradient(1);
+     background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 200ms ease-in-out;
+
+  &:hover  {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+}
+}
+
+ 

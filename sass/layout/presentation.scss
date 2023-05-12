@@ -1,9 +1,11 @@
-@use "../utils/dark.scss";
+@use "../utils/mixin.scss";
+@use "../utils/variable.scss";
+
 .présentation {
     text-align: center;
-    padding: 2rem;
+    padding: 2 * variable.$defaul_size;
     background-color: #fafafa;
-    padding-bottom: 3rem;
+    padding-bottom: 3 * variable.$defaul_size;
 }
   .pres_title .pres_subtitle {
     display: flex;
@@ -22,9 +24,12 @@
     border-radius: 30px;
     color: #fff;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: variable.$defaul_size;
     background-color: #686868;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    @include mixin.gradient;
     cursor: pointer;
-    @include dark.shadow;
+    @include mixin.shadow;
+    &:hover {
+      filter: brightness(120%);
+    }
 }

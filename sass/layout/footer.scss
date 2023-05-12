@@ -1,0 +1,20 @@
+@use "../utils/colors.scss";
+
+.footer {
+    background-color: colors.$darkgrey;
+    padding: 0rem 1rem; 
+    color: #fff;
+ &_title {
+    font-family: 'Shrikhand', cursive;
+    padding: 1rem 0;
+ }
+ p {
+    padding: 0.2rem;
+ }
+ a {
+    font-weight: 500;  
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+ }
+}
