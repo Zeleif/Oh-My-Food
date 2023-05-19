@@ -1,9 +1,9 @@
-$color-tertiary: #99E2D0;
 @use "../utils/variable.scss";
 @use "../utils/mixin.scss";
+@use "../utils/colors.scss";
 
 .restaurants {
-    background-color: #f6f6f6;
+    background-color: colors.$lightgrey;
     margin-bottom: 2rem;
   .container {
     display: flex;
@@ -27,8 +27,8 @@ $color-tertiary: #99E2D0;
     object-fit: cover; 
  }
  & span {
-    background-color: $color-tertiary;
-    color: darken($color-tertiary, 35%);
+    background-color: colors.$tertiarycolor;
+    color: darken(colors.$tertiarycolor, 35%);
     font-weight: bold;
     font-size: 14px;
     padding: 0.5rem;

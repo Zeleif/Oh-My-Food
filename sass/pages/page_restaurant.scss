@@ -3,7 +3,19 @@
 @use "../utils/colors.scss";
 @use "../utils/animation.scss";
 
-
+.header_arrow {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000;
+}
   .resto_img {
     width: 100%;
     height: auto;
@@ -50,7 +62,18 @@
     gap: variable.$defaul_size;  
     background-color: #F6F6F6;
     & h3{
-      margin: 1rem
+      margin: 1rem;
+      font-weight: 400;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        height: 0.25rem;
+        width: 3rem;
+        background-color: colors.$tertiarycolor;
+      }
     }
   &_category {
     background-color: white;
@@ -59,6 +82,14 @@
    margin-left: 1.5rem;
     @include mixin.shadow;
     overflow: hidden;
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+       animation-delay: 100ms * $i; 
+      }
+    }
   }
   &Item {
     display: variable.$flex;
@@ -114,5 +145,13 @@
       animation-duration: 0.5s;
     }
    }
+  }
+}
+.order {
+  height: 20vh;
+  display: grid;
+  place-items: center;
+  & button {
+    @include mixin.btn;
   }
 }

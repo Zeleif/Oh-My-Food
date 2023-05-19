@@ -1,8 +1,9 @@
 @use "../utils/variable.scss";
+@use "../utils/colors.scss";
 
 .nav-bar {
     text-align: center;
-    background-color: #f6f6f6;
+    background-color: colors.$lightgrey;
     
     
     .search-bar {
@@ -15,7 +16,7 @@
             width: 200px;
             margin-left: variable.$defaul_size;
             margin-bottom: variable.$defaul_size;
-            background-color: #f6f6f6;
+            background-color: colors.$lightgrey;
         }
     }
 }

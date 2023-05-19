@@ -1,35 +1,46 @@
 @use "../utils/mixin.scss";
 @use "../utils/variable.scss";
+@use "../utils/colors.scss";
 
 .présentation {
     text-align: center;
     padding: 2 * variable.$defaul_size;
-    background-color: #fafafa;
+    background-color: colors.$creamcolor;
     padding-bottom: 3 * variable.$defaul_size;
-}
-  .pres_title .pres_subtitle {
+  .pres_title {
+ & .pres_subtitle {
     display: flex;
     justify-content: center;
     text-align: center;
+   }
   }
-  
   .pres_subtitle {
     margin: 1.5rem 0;
     font-weight: 300;
     color: gray;
   }
+}
   .pres_btn {
-    border: 0;
-    padding: 1rem 1rem;
-    border-radius: 30px;
-    color: #fff;
-    font-weight: 500;
-    font-size: variable.$defaul_size;
-    background-color: #686868;
-    @include mixin.gradient;
-    cursor: pointer;
-    @include mixin.shadow;
-    &:hover {
-      filter: brightness(120%);
-    }
+    @include mixin.btn;
+}
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: colors.$creamcolor;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 1s variable.$animation_duration forwards;
+  &::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 15px solid colors.$primarycolor;
+    border-bottom: 15px solid colors.$secondarycolor;
+    animation: spin variable.$animation_duration infinite linear;
+  }
+  
 }

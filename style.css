@@ -54,14 +54,12 @@ h2 {
   background-color: #fafafa;
   padding-bottom: 3rem;
 }
-
-.pres_title .pres_subtitle {
+.présentation .pres_title .pres_subtitle {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-
-.pres_subtitle {
+.présentation .pres_subtitle {
   margin: 1.5rem 0;
   font-weight: 300;
   color: gray;
@@ -69,18 +67,39 @@ h2 {
 
 .pres_btn {
   border: 0;
-  padding: 1rem 1rem;
+  padding: 1rem 3rem;
   border-radius: 30px;
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
   background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 .pres_btn:hover {
   filter: brightness(120%);
+}
+
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #fafafa;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 1s 3s forwards;
+}
+.loader::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 15px solid #9356DC;
+  border-bottom: 15px solid #FF79DA;
+  animation: spin 3s infinite linear;
 }
 
 .tuto {
@@ -210,6 +229,40 @@ h2 {
     transform: rotate(0);
   }
 }
+@keyframes appear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.header_arrow {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000;
+}
+
 .resto_img {
   width: 100%;
   height: auto;
@@ -260,6 +313,17 @@ h2 {
 }
 .menu h3 {
   margin: 1rem;
+  font-weight: 400;
+  position: relative;
+}
+.menu h3::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99E2D0;
 }
 .menu_category {
   background-color: white;
@@ -268,6 +332,39 @@ h2 {
   margin-left: 1.5rem;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.menu_category:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menu_category:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menu_category:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menu_category:nth-child(4) {
+  animation-delay: 400ms;
+}
+.menu_category:nth-child(5) {
+  animation-delay: 500ms;
+}
+.menu_category:nth-child(6) {
+  animation-delay: 600ms;
+}
+.menu_category:nth-child(7) {
+  animation-delay: 700ms;
+}
+.menu_category:nth-child(8) {
+  animation-delay: 800ms;
+}
+.menu_category:nth-child(9) {
+  animation-delay: 900ms;
+}
+.menu_category:nth-child(10) {
+  animation-delay: 1000ms;
 }
 .menuItem {
   display: flex;
@@ -321,6 +418,27 @@ h2 {
 .menuItem:hover i {
   animation-name: tour;
   animation-duration: 0.5s;
+}
+
+.order {
+  height: 20vh;
+  display: grid;
+  place-items: center;
+}
+.order button {
+  border: 0;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: #686868;
+  cursor: pointer;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.order button:hover {
+  filter: brightness(120%);
 }
 
 /*# sourceMappingURL=style.css.map */
