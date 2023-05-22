@@ -1,20 +1,20 @@
 * {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-::before,
-::after {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  ::before,
+  ::after {
     box-sizing: border-box;
-}
+  }
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 h1 {
-    font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
 h2 {
-    margin: 1rem 0 0 1rem;
-    padding-bottom: 1.5rem;
-  }
+  margin: 1rem 0 0 1rem;
+  padding-bottom: 1.5rem;
+}

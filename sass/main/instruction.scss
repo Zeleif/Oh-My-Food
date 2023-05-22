@@ -1,6 +1,6 @@
 @use "../utils/mixin.scss";
 @use "../utils/variable.scss";
-.tuto {
+.instruction {
    margin-bottom: 4 * variable.$defaul_size;
    display: grid;
    place-items: center;
@@ -25,10 +25,16 @@
     padding: 1.2rem 0;
     box-shadow: 0 3px 5px darkgray;
     width: 80vw;
-    & div {
+    & .instruction_div {
       display: flex;
       justify-content: center;
       font-weight: 700;
+      width: 100%;
+      margin: auto;
+      & div {
+        display: flex;
+        width: 70%;
+      }
   }
  }
 ol li i {
@@ -47,8 +53,13 @@ ol li i {
   color: #9356dc;
  }
 }
+@media screen and (min-width: 768px) {
+  .instruction_div div {
+    width: 50% !important;
+}
+}
  @media screen and (min-width: 1024px) {
-  .tuto ol {
+  .instruction ol {
     display: flex;
     flex-wrap: nowrap;
     gap: 2rem;
@@ -56,7 +67,7 @@ ol li i {
 ol {
   width: 80vw;
   }
-.main_tuto {
+.main_instruction {
   padding: 0;
   }
 }

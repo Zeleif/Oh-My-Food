@@ -2,32 +2,32 @@
 @use "../utils/mixin.scss";
 
 .footer {
-    background-color: colors.$darkgrey;
-    color: #fff;
+  background-color: colors.$darkgrey;
+  color: #fff;
 
- &_title {
-    font-family: 'Shrikhand', cursive;
+  &_title {
+    font-family: "Shrikhand", cursive;
     padding: 1rem 0;
     margin-left: 0.5rem;
     font-weight: 500;
- }
- p {
+  }
+  p {
     padding: 0.2rem;
     margin-left: 0.5rem;
- }
- a {
-    font-weight: 500;  
+  }
+  a {
+    font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     color: #fff;
- }
+  }
 }
 @media screen and (min-width: 1024px) {
   .container {
-   @include mixin.center;
+    @include mixin.center;
   }
-.footer_title {
-   position: relative;
-   left: 45rem;
- }
+  .footer_title {
+    position: relative;
+    left: 45rem;
+  }
 }

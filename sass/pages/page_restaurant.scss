@@ -16,7 +16,7 @@
 }
 .bandeau {
   padding-left: 0.2rem;
-  &_title{
+  &_title {
     border-radius: 2rem 2rem 0 0;
     margin-top: -40px;
     background-color: #f6f6f6;
@@ -31,59 +31,61 @@
   object-fit: cover;
   border-radius: 2px;
 }
-   .text_title {
-    margin: 0;
-    font-family: 'Shrikhand', cursive; 
-    font-size: 28px;
-    font-weight: 600;
-    padding-top: 2rem;
-    padding-left: variable.$defaul_size;  
-    i {
-      font-size: 2rem;
-      position: absolute;
-      right: variable.$defaul_size;      
-    }
-    .fas {
+.text_title {
+  margin: 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: 600;
+  padding-top: 2rem;
+  padding-left: variable.$defaul_size;
+  i {
+    font-size: 2rem;
+    position: absolute;
+    right: variable.$defaul_size;
+  }
+  .fas {
     color: transparent;
     opacity: 0;
-     @include mixin.gradient(1);
-     background-clip: text;
+    @include mixin.gradient(1);
+    background-clip: text;
     -webkit-background-clip: text;
     transition: all 200ms ease-in-out;
-    
-    &:hover  {
-    opacity: 1;
-    transform: scale(1.1);
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
     }
   }
 }
 
-  .menu {
+.menu {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  gap: variable.$defaul_size;
+  background-color: #f6f6f6;
+  padding-bottom: 2rem;
+  & h3 {
+    margin: variable.$defaul_size;
+    font-weight: 400;
+    position: relative;
+    width: 85vw;
+    margin: auto;
     display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
-    gap: variable.$defaul_size;  
-    background-color: #F6F6F6;
-    padding-bottom: 2rem;
-    & h3{
-      margin: variable.$defaul_size;
-      font-weight: 400;
-      position: relative;
-      display: grid;
-      place-self: flex-start;
-      &::after {
-        content: "";
-        position: absolute;
-        top: 1.5rem;
-        left: 0;
-        height: 0.25rem;
-        width: 3rem;
-        background-color: colors.$tertiarycolor;
-      }
+    place-self: flex-start;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1.5rem;
+      left: 0;
+      height: 0.25rem;
+      width: 3rem;
+      background-color: colors.$tertiarycolor;
     }
+  }
   &_category {
     background-color: white;
-    border-radius: variable.$defaul_size;   
+    border-radius: variable.$defaul_size;
     width: 85vw;
     @include mixin.shadow;
     overflow: hidden;
@@ -92,14 +94,14 @@
     animation-fill-mode: both;
     @for $i from 1 through 10 {
       &:nth-child(#{$i}) {
-       animation-delay: 100ms * $i; 
+        animation-delay: 100ms * $i;
       }
     }
   }
   &Item {
-   @include mixin.center;
+    @include mixin.center;
     overflow: hidden;
-    &_price{
+    &_price {
       padding: variable.$defaul_size;
       margin-left: auto;
       font-weight: bold;
@@ -107,44 +109,44 @@
       display: variable.$flex;
       align-items: flex-end;
     }
-    &_detail{ 
-    padding: variable.$defaul_size;
-    overflow: hidden;
-    h4, 
-    p {
+    &_detail {
+      padding: variable.$defaul_size;
       overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    } 
+      h4,
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
     }
-    &_check{
-    @include mixin.center;
-    padding: variable.$defaul_size;
-    height: 2.4rem;
-    width: 2rem;
-    border-radius: 0 1rem 1rem 0;
-    margin-right: -4rem;
-    flex-shrink: 0;
-    background-color: colors.$tertiarycolor;
-    transition: all 0.5s;
-    i {
+    &_check {
       @include mixin.center;
-      background-color: white;
-      border-radius: 50%;
-      height: 1.5rem;
-      width: 1.5rem;
-      color: colors.$tertiarycolor;
+      padding: variable.$defaul_size;
+      height: 2.4rem;
+      width: 2rem;
+      border-radius: 0 1rem 1rem 0;
+      margin-right: -4rem;
+      flex-shrink: 0;
+      background-color: colors.$tertiarycolor;
+      transition: all 0.5s;
+      i {
+        @include mixin.center;
+        background-color: white;
+        border-radius: 50%;
+        height: 1.5rem;
+        width: 1.5rem;
+        color: colors.$tertiarycolor;
+      }
     }
-  }
-  &:hover { 
-    .menuItem_check {
-    margin-right: 0;
+    &:hover {
+      .menuItem_check {
+        margin-right: 0;
+      }
+      i {
+        animation-name: tour;
+        animation-duration: 0.5s;
+      }
     }
-    i {
-      animation-name: tour;
-      animation-duration: 0.5s;
-    }
-   }
   }
 }
 .order {
@@ -155,42 +157,26 @@
   & button {
     @include mixin.btn;
   }
-}
-@media screen and (min-width: 768px) {
-  .menu h3{
-    padding-left: 2rem;
-    &::after {
-      content: ""; 
-      position: absolute; 
-      left: 2rem;     
-    }
-  }
 }  
 @media screen and (min-width: 1024px) {
   .bandeau_title {
     display: grid;
     place-content: center;
   }
-.text_title i {
-  right: 13rem;
+  .text_title i {
+    right: 10rem;
   }
-.menu_category {
-  width: 60vw;
+  .menu_category {
+    width: 60vw;
   }
-.menu h3 {
- position: relative;
- left: 3rem;
+  .menu h3 {
+    position: relative;
+    width: 60vw;
+    margin: auto;
   }
-main {
-padding: 7rem;
-padding-top: 0;
-padding-bottom: 0;
+  main {
+    padding: 7rem;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
-
-
-
-
- 
-
-

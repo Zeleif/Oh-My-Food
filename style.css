@@ -91,7 +91,7 @@ h2 {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: disappear 1s 3s forwards;
+  animation: disappear 1s 1s forwards;
 }
 .loader::after {
   content: "";
@@ -100,20 +100,20 @@ h2 {
   border-radius: 50%;
   border-top: 15px solid #9356DC;
   border-bottom: 15px solid #FF79DA;
-  animation: spin 3s infinite linear;
+  animation: spin 1s infinite linear;
 }
 
-.tuto {
+.instruction {
   margin-bottom: 4rem;
   display: grid;
   place-items: center;
 }
-.tuto h2 {
+.instruction h2 {
   display: grid;
   place-self: flex-start;
   padding: 1rem;
 }
-.tuto ol {
+.instruction ol {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -121,7 +121,7 @@ h2 {
   padding: 0;
   gap: 1rem;
 }
-.tuto li {
+.instruction li {
   position: relative;
   display: flex;
   justify-content: center;
@@ -132,15 +132,21 @@ h2 {
   box-shadow: 0 3px 5px darkgray;
   width: 80vw;
 }
-.tuto li div {
+.instruction li .instruction_div {
   display: flex;
   justify-content: center;
   font-weight: 700;
+  width: 100%;
+  margin: auto;
 }
-.tuto ol li i {
+.instruction li .instruction_div div {
+  display: flex;
+  width: 70%;
+}
+.instruction ol li i {
   margin-right: 0.5rem;
 }
-.tuto ol li span {
+.instruction ol li span {
   position: absolute;
   left: -1rem;
   padding: 0.3rem 0.6rem;
@@ -149,12 +155,17 @@ h2 {
   background-color: #9356dc;
   color: white;
 }
-.tuto .fa-solid {
+.instruction .fa-solid {
   color: #9356dc;
 }
 
+@media screen and (min-width: 768px) {
+  .instruction_div div {
+    width: 50% !important;
+  }
+}
 @media screen and (min-width: 1024px) {
-  .tuto ol {
+  .instruction ol {
     display: flex;
     flex-wrap: nowrap;
     gap: 2rem;
@@ -162,7 +173,7 @@ h2 {
   ol {
     width: 80vw;
   }
-  .main_tuto {
+  .main_instruction {
     padding: 0;
   }
 }
@@ -383,13 +394,15 @@ h2 {
   place-items: center;
   grid-template-columns: 1fr;
   gap: 1rem;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding-bottom: 2rem;
 }
 .menu h3 {
   margin: 1rem;
   font-weight: 400;
   position: relative;
+  width: 85vw;
+  margin: auto;
   display: grid;
   place-self: flex-start;
 }
@@ -519,30 +532,21 @@ h2 {
   filter: brightness(120%);
 }
 
-@media screen and (min-width: 768px) {
-  .menu h3 {
-    padding-left: 2rem;
-  }
-  .menu h3::after {
-    content: "";
-    position: absolute;
-    left: 2rem;
-  }
-}
 @media screen and (min-width: 1024px) {
   .bandeau_title {
     display: grid;
     place-content: center;
   }
   .text_title i {
-    right: 13rem;
+    right: 10rem;
   }
   .menu_category {
     width: 60vw;
   }
   .menu h3 {
     position: relative;
-    left: 3rem;
+    width: 60vw;
+    margin: auto;
   }
   main {
     padding: 7rem;

@@ -2,22 +2,21 @@
 @use "../utils/colors.scss";
 
 .nav-bar {
-    text-align: center;
-    background-color: colors.$lightgrey;
-    
-    
-    .search-bar {
-        font-size: variable.$defaul_size;
-        padding-top: variable.$defaul_size;
-        input {
-            border: none;
-            text-align: center;
-            font-size: variable.$defaul_size;
-            font-weight: 700;
-            width: 200px;
-            margin-left: variable.$defaul_size;
-            margin-bottom: variable.$defaul_size;
-            background-color: colors.$lightgrey;
-        }
+  text-align: center;
+  background-color: colors.$lightgrey;
+
+  .search-bar {
+    font-size: variable.$defaul_size;
+    padding-top: variable.$defaul_size;
+    input {
+      border: none;
+      text-align: center;
+      font-size: variable.$defaul_size;
+      font-weight: 700;
+      width: 200px;
+      margin-left: variable.$defaul_size;
+      margin-bottom: variable.$defaul_size;
+      background-color: colors.$lightgrey;
     }
+  }
 }

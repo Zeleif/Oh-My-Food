@@ -3,16 +3,16 @@
 @use "../utils/colors.scss";
 
 .présentation {
-    text-align: center;
-    padding: 2 * variable.$defaul_size;
-    background-color: colors.$creamcolor;
-    padding-bottom: 3 * variable.$defaul_size;
+  text-align: center;
+  padding: 2 * variable.$defaul_size;
+  background-color: colors.$creamcolor;
+  padding-bottom: 3 * variable.$defaul_size;
   .pres_title {
- & .pres_subtitle {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-   }
+    & .pres_subtitle {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
   }
   .pres_subtitle {
     margin: 1.5rem 0;
@@ -20,8 +20,8 @@
     color: gray;
   }
 }
-  .pres_btn {
-    @include mixin.btn;
+.pres_btn {
+  @include mixin.btn;
 }
 .loader {
   position: fixed;
@@ -42,5 +42,4 @@
     border-bottom: 15px solid colors.$secondarycolor;
     animation: spin variable.$animation_duration infinite linear;
   }
-  
 }
