@@ -19,3 +19,8 @@
         filter: brightness(120%);
       }
 }
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

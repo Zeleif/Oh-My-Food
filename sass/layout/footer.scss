@@ -1,20 +1,33 @@
 @use "../utils/colors.scss";
+@use "../utils/mixin.scss";
 
 .footer {
     background-color: colors.$darkgrey;
-    padding: 0rem 1rem; 
     color: #fff;
+
  &_title {
     font-family: 'Shrikhand', cursive;
     padding: 1rem 0;
+    margin-left: 0.5rem;
+    font-weight: 500;
  }
  p {
     padding: 0.2rem;
+    margin-left: 0.5rem;
  }
  a {
     font-weight: 500;  
     text-decoration: none;
     cursor: pointer;
     color: #fff;
+ }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+   @include mixin.center;
+  }
+.footer_title {
+   position: relative;
+   left: 45rem;
  }
 }

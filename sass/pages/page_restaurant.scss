@@ -9,27 +9,28 @@
   height: 2rem;
   width: 2rem;
   top: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include mixin.center;
   transform: translateY(-50%);
   font-size: 1.2rem;
   color: #000;
 }
-  .resto_img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 2px;
-  }
-  .bandeau_title{
+.bandeau {
+  padding-left: 0.2rem;
+  &_title{
     border-radius: 2rem 2rem 0 0;
     margin-top: -40px;
     background-color: #f6f6f6;
     z-index: 100;
     position: relative;
   }
+}
+.resto_img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 2px;
+}
    .text_title {
     margin: 0;
     font-family: 'Shrikhand', cursive; 
@@ -56,15 +57,20 @@
     }
   }
 }
+
   .menu {
     display: grid;
+    place-items: center;
     grid-template-columns: 1fr;
     gap: variable.$defaul_size;  
     background-color: #F6F6F6;
+    padding-bottom: 2rem;
     & h3{
-      margin: 1rem;
+      margin: variable.$defaul_size;
       font-weight: 400;
       position: relative;
+      display: grid;
+      place-self: flex-start;
       &::after {
         content: "";
         position: absolute;
@@ -79,7 +85,6 @@
     background-color: white;
     border-radius: variable.$defaul_size;   
     width: 85vw;
-   margin-left: 1.5rem;
     @include mixin.shadow;
     overflow: hidden;
     animation-name: appear;
@@ -92,11 +97,10 @@
     }
   }
   &Item {
-    display: variable.$flex;
-    align-items: center;
+   @include mixin.center;
     overflow: hidden;
     &_price{
-      padding: variable.$defaul_size;;
+      padding: variable.$defaul_size;
       margin-left: auto;
       font-weight: bold;
       height: 2.4rem;
@@ -114,9 +118,7 @@
     } 
     }
     &_check{
-    display: variable.$flex;
-    align-items: center;
-    justify-content: center;
+    @include mixin.center;
     padding: variable.$defaul_size;
     height: 2.4rem;
     width: 2rem;
@@ -126,12 +128,10 @@
     background-color: colors.$tertiarycolor;
     transition: all 0.5s;
     i {
-      display: variable.$flex;
-      align-items: center;
-      justify-content: center;
+      @include mixin.center;
       background-color: white;
       border-radius: 50%;
-      aspect-ratio: 1;
+      height: 1.5rem;
       width: 1.5rem;
       color: colors.$tertiarycolor;
     }
@@ -148,10 +148,49 @@
   }
 }
 .order {
-  height: 20vh;
+  height: 15vh;
   display: grid;
   place-items: center;
+  background-color: colors.$lightgrey;
   & button {
     @include mixin.btn;
   }
 }
+@media screen and (min-width: 768px) {
+  .menu h3{
+    padding-left: 2rem;
+    &::after {
+      content: ""; 
+      position: absolute; 
+      left: 2rem;     
+    }
+  }
+}  
+@media screen and (min-width: 1024px) {
+  .bandeau_title {
+    display: grid;
+    place-content: center;
+  }
+.text_title  {
+  right: 16rem;
+  }
+.menu_category {
+  width: 60vw;
+  }
+.menu h3 {
+ position: relative;
+ left: 3rem;
+  }
+main {
+padding: 7rem;
+padding-top: 0;
+padding-bottom: 0;
+  }
+}
+
+
+
+
+ 
+
+

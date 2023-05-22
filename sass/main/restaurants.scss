@@ -4,11 +4,16 @@
 
 .restaurants {
     background-color: colors.$lightgrey;
-    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+  .resto_title {
+    padding: 1rem;
+  }  
   .container {
     display: flex;
     flex-direction: column;
     gap: 2 * variable.$defaul_size;
+    padding: 1rem;
   }  
 }
 .card_resto {
@@ -24,7 +29,7 @@
     border: transparent solid 0px;
     border-radius: 1rem 1rem 0 0;
     box-shadow: none;
-    object-fit: cover; 
+    object-fit: cover;
  }
  & span {
     background-color: colors.$tertiarycolor;
@@ -39,17 +44,21 @@
   } 
   .card_info {
     position: relative;
+    padding-left: 1rem;
+   & h3 {
+      padding-top: 0.4rem;
   }
-    h3 {
-      padding-top: 0.5rem
-  }
-    i {
+   & i {
       font-size: 1.5rem;
       position: absolute;
       right: variable.$defaul_size;
       top: 50%;
       transform: translateY(-50%);
   }
+  & p {
+    margin-bottom: 1rem;
+  }
+}
   .fas {
     color: transparent;
     opacity: 0;
@@ -68,5 +77,20 @@
   }
 }
 }
-
- 
+@media screen and (min-width: 1024px) {
+  .pres_title {
+    padding: 0;
+  }
+  .card_info {
+    padding-left: 1rem;
+  }
+  .restaurants .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
+  h2 {
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+  }
+} 
