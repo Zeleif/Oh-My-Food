@@ -1,30 +1,33 @@
 @use "../utils/mixin.scss";
 @use "../utils/variable.scss";
 .instruction {
-   margin-bottom: 4 * variable.$defaul_size;
-   display: grid;
-   place-items: center;
-   & h2 {
+  margin-bottom: 4 * variable.$defaul_size;
+  display: grid;
+  place-items: center;
+  & h2 {
     display: grid;
     place-self: flex-start;
     padding: 1rem;
-   }
- ol  {
-   list-style: none;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   padding: 0;
-   gap: 1rem;
+  }
+  ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    gap: 1rem;
   }
   li {
-     position: relative;
+    position: relative;
     @include mixin.center;
-     background-color: #F6F6F6;
+    background-color: #f6f6f6;
     border-radius: variable.$defaul_size;
     padding: 1.2rem 0;
     box-shadow: 0 3px 5px darkgray;
     width: 80vw;
+    &:hover {
+      filter: brightness(120%);
+    }
     & .instruction_div {
       display: flex;
       justify-content: center;
@@ -35,39 +38,39 @@
         display: flex;
         width: 70%;
       }
+    }
   }
- }
-ol li i {
-   margin-right: 0.5rem;
-}
+  ol li i {
+    margin-right: 0.5rem;
+  }
   ol li span {
-   position: absolute;
-   left: -1rem;
-   padding: 0.3rem 0.6rem;
-   border-radius: 50%;
-   font-weight: bold;
-   background-color: #9356dc;
-   color: white;
- }
- .fa-solid  {
-  color: #9356dc;
- }
+    position: absolute;
+    left: -1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: #9356dc;
+    color: white;
+  }
+  .fa-solid {
+    color: #9356dc;
+  }
 }
 @media screen and (min-width: 768px) {
   .instruction_div div {
     width: 50% !important;
+  }
 }
-}
- @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .instruction ol {
     display: flex;
     flex-wrap: nowrap;
     gap: 2rem;
- }
-ol {
-  width: 80vw;
   }
-.main_instruction {
-  padding: 0;
+  ol {
+    width: 80vw;
+  }
+  .main_instruction {
+    padding: 0;
   }
 }

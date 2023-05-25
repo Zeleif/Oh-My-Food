@@ -3,26 +3,26 @@
 @use "../utils/colors.scss";
 
 .restaurants {
-    background-color: colors.$lightgrey;
-    padding-bottom: 3rem;
-    padding-top: 1rem;
+  background-color: colors.$lightgrey;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
   .resto_title {
     padding: 1rem;
-  }  
+  }
   .container {
     display: flex;
     flex-direction: column;
     gap: 2 * variable.$defaul_size;
     padding: 1rem;
-  }  
+  }
 }
 .card_resto {
-    background-color: white;
-    border-radius: variable.$defaul_size;
-    position: relative;
-    text-decoration: none;
-    color: inherit;
-    display: block;  
+  background-color: white;
+  border-radius: variable.$defaul_size;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
   & img {
     height: 12 * variable.$defaul_size;
     width: 100%;
@@ -30,8 +30,8 @@
     border-radius: 1rem 1rem 0 0;
     box-shadow: none;
     object-fit: cover;
- }
- & span {
+  }
+  & span {
     background-color: colors.$tertiarycolor;
     color: darken(colors.$tertiarycolor, 35%);
     font-weight: bold;
@@ -41,33 +41,33 @@
     position: absolute;
     top: variable.$defaul_size;
     right: 0.75rem;
-  } 
+  }
   .card_info {
     position: relative;
     padding-left: 1rem;
-   & h3 {
+    & h3 {
       padding-top: 0.4rem;
-  }
-   & i {
+    }
+    & i {
       font-size: 1.5rem;
       position: absolute;
       right: variable.$defaul_size;
       top: 50%;
       transform: translateY(-50%);
+    }
+    & p {
+      margin-bottom: 1rem;
+    }
   }
-  & p {
-    margin-bottom: 1rem;
-  }
-}
   .fas {
     color: transparent;
     opacity: 0;
-     @include mixin.gradient(1);
-     background-clip: text;
+    @include mixin.gradient(1);
+    background-clip: text;
     -webkit-background-clip: text;
     transition: all 200ms ease-in-out;
-
-  &:hover  {
+  }
+  &:hover {
     opacity: 1;
     transform: translateY(-50%) scale(1.1);
   }
@@ -76,7 +76,7 @@
     transform: translateY(-50%) scale(1.1);
   }
 }
-}
+
 @media screen and (min-width: 1024px) {
   .pres_title {
     padding: 0;
@@ -90,7 +90,7 @@
     padding: 2rem;
   }
   h2 {
-  padding-bottom: 1rem;
-  padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
   }
-} 
+}

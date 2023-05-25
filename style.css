@@ -126,11 +126,14 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 1rem;
   padding: 1.2rem 0;
   box-shadow: 0 3px 5px darkgray;
   width: 80vw;
+}
+.instruction li:hover {
+  filter: brightness(120%);
 }
 .instruction li .instruction_div {
   display: flex;
@@ -244,11 +247,11 @@ h2 {
   -webkit-background-clip: text;
   transition: all 200ms ease-in-out;
 }
-.card_resto .fas:hover {
+.card_resto:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
-.card_resto .fas:active {
+.card_resto:active {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
