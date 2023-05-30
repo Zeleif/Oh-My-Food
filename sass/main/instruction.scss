@@ -58,7 +58,7 @@
 }
 @media screen and (min-width: 768px) {
   .instruction_div div {
-    width: 50% !important;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -69,8 +69,5 @@
   }
   ol {
     width: 80vw;
-  }
-  .main_instruction {
-    padding: 0;
   }
 }

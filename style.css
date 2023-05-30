@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+.main {
+  margin: 0;
+  padding: 0;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -164,7 +169,7 @@ h2 {
 
 @media screen and (min-width: 768px) {
   .instruction_div div {
-    width: 50% !important;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -175,9 +180,6 @@ h2 {
   }
   ol {
     width: 80vw;
-  }
-  .main_instruction {
-    padding: 0;
   }
 }
 .restaurants {
@@ -233,8 +235,7 @@ h2 {
   font-size: 1.5rem;
   position: absolute;
   right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
 }
 .card_resto .card_info p {
   margin-bottom: 1rem;
@@ -247,13 +248,13 @@ h2 {
   -webkit-background-clip: text;
   transition: all 200ms ease-in-out;
 }
-.card_resto:hover {
+.card_resto .fas:hover {
   opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
 }
-.card_resto:active {
+.card_resto .fas:active {
   opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 1024px) {
@@ -551,7 +552,7 @@ h2 {
     width: 60vw;
     margin: auto;
   }
-  main {
+  .page_restaurants {
     padding: 7rem;
     padding-top: 0;
     padding-bottom: 0;

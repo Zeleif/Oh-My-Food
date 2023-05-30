@@ -52,31 +52,29 @@
       font-size: 1.5rem;
       position: absolute;
       right: variable.$defaul_size;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 40%;
     }
     & p {
       margin-bottom: 1rem;
     }
   }
   .fas {
-    color: transparent;
-    opacity: 0;
-    @include mixin.gradient(1);
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: all 200ms ease-in-out;
-  }
-  &:hover {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.1);
-  }
-  &:active {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.1);
+      color: transparent;
+      opacity: 0;
+      @include mixin.gradient(1);
+      background-clip: text;
+      -webkit-background-clip: text;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+      &:active {
+     opacity: 1;
+     transform: scale(1.1);
+    }
   }
 }
-
 @media screen and (min-width: 1024px) {
   .pres_title {
     padding: 0;
